@@ -1,0 +1,5 @@
+.github
+.vscode
+*.test.*
+CLAUDE.md
+jest.*

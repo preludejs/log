@@ -1,0 +1,58 @@
+{
+  "name": "@prelude/log",
+  "version": "0.0.0",
+  "description": "Log package.",
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3",
+  "type": "module",
+  "scripts": {
+    "test": "make test",
+    "prepack": "make prepack",
+    "postversion": "make postversion"
+  },
+  "main": "./cjs/index.js",
+  "module": "./mjs/index.js",
+  "exports": {
+    ".": {
+      "bundle": "./src/index.ts",
+      "import": "./mjs/index.js",
+      "require": "./cjs/index.js",
+      "types": "./dts/index.d.ts"
+    },
+    "./*.js": {
+      "bundle": "./src/*.ts",
+      "import": "./mjs/*.js",
+      "require": "./cjs/*.js",
+      "types": "./dts/*.d.ts"
+    },
+    "./*": {
+      "bundle": "./src/*",
+      "import": "./mjs/*",
+      "require": "./cjs/*.js",
+      "types": "./dts/*.d.ts"
+    }
+  },
+  "keywords": [
+    "prelude",
+    "std",
+    "lib",
+    "stdlib",
+    "library",
+    "log",
+    "logger",
+    "bunyan",
+    "winston"
+  ],
+  "author": "Mirek Rusin (https://github.com/mirek)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "7.25.9",
+    "@babel/preset-env": "7.26.9",
+    "@babel/preset-typescript": "7.26.0",
+    "@jest/globals": "29.7.0",
+    "@tsconfig/node22": "22.0.0",
+    "@types/jest": "29.5.14",
+    "eslint": "9.22.0",
+    "jest": "29.7.0",
+    "typescript": "5.8.2"
+  }
+}

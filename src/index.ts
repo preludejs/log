@@ -1,0 +1,5 @@
+export { default } from './log.js'
+export * as Target from './target.js'
+export * as Severity from './severity.js'
+export * from './log.js'
+export * from './of.js'
